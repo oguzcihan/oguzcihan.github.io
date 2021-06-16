@@ -1,2 +1,2 @@
-# oguzcihan.github.io
-Personal resume
+# Kişisel CV -> https://oguzcihan.github.io/
+
