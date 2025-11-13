@@ -1,711 +1,86 @@
 <!DOCTYPE html>
-<html lang="tr" class="no-js">
-
-
-
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Oğuzhan Cihan - Resume</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Oğuzhan Cihan- Resume" />
-    <meta name="author" content="lmpixels" />
-    <link rel="shortcut icon" href="favicon.ico">
-
-
-    <link rel="stylesheet" href="css/reset.css" type="text/css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
-    <link rel="stylesheet" href="css/animations.css" type="text/css">
-    <link rel="stylesheet" href="css/perfect-scrollbar.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-
-    <script src="js/modernizr.custom.js"></script>
-    <script async src='../../../../cdn-cgi/bm/cv/669835187/api.js'></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oğuzhan Cihan – Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { inter: ['Inter', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
 </head>
+<body class="font-inter bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+  <!-- Theme Toggle Button -->
+  <button onclick="toggleTheme()" id="themeToggle" class="fixed top-5 right-5 z-50 p-3 rounded-full bg-white dark:bg-gray-700 shadow-lg">
+    <span id="themeIcon" class="text-xl">🌙</span>
+  </button>
 
-<body>
-    <!-- Animated Background -->
-    <div class="lm-animated-bg" style="background-image: url(img/main_bg.png);"></div>
-    <!-- /Animated Background -->
+  <!-- Hero Section -->
+  <header class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-br from-indigo-600 to-cyan-500 dark:from-indigo-800 dark:to-cyan-600 text-white">
+    <h1 class="text-5xl font-bold mb-4">Oğuzhan Cihan</h1>
+    <p class="text-lg opacity-90 max-w-xl">Software Engineer • AI & Computer Vision Researcher • Fullstack Developer</p>
+  </header>
 
-    <!-- Loading animation -->
-    <div class="preloader">
-        <div class="preloader-animation">
-            <div class="preloader-spinner">
-            </div>
-        </div>
+  <!-- About -->
+  <section id="about" class="py-24 px-6 md:px-16">
+    <h2 class="text-4xl font-bold text-center mb-10">About Me</h2>
+    <p class="max-w-3xl mx-auto text-center text-lg leading-relaxed">
+      I am a software engineer experienced in Java, Spring Boot, .NET, Go, and modern frontend technologies.
+      I build scalable microservices, AI‑driven systems, and intuitive full‑stack applications. I focus on clean
+      architectural patterns, ML/computer vision, and innovative digital solutions.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-24 px-6 md:px-16 bg-gray-100 dark:bg-gray-800">
+    <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
+
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
+        <h3 class="text-2xl font-semibold mb-3">AI Password Analyzer</h3>
+        <p class="opacity-80">Flask + Tailwind AI‑powered password strength analyzer & smart generator.</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
+        <h3 class="text-2xl font-semibold mb-3">sahibinesor.com</h3>
+        <p class="opacity-80">A vehicle analytics & real driver review platform built with React + TypeScript.</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
+        <h3 class="text-2xl font-semibold mb-3">Vehicle Recognition</h3>
+        <p class="opacity-80">YOLOv8 / YOLOv12 license plate + model detection pipeline with OCR.</p>
+      </div>
     </div>
-    <!-- /Loading animation -->
-
-    <div class="page">
-        <div class="page-content">
-
-            <header id="site_header" class="header mobile-menu-hide">
-                <div class="header-content">
-                    <div class="header-photo">
-                        <img src="img/main_photo.jpg" alt="oguzchn">
-                    </div>
-                    <div class="header-titles">
-                        <h2>Oğuzhan Cihan</h2>
-                        <h4>Software Developer</h4>
-                    </div>
-                </div>
-
-                <ul class="main-menu">
-                    <li class="active">
-                        <a href="#home" class="nav-anim">
-                            <span class="menu-icon lnr lnr-home"></span>
-                            <span class="link-text">Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#about-me" class="nav-anim">
-                            <span class="menu-icon lnr lnr-user"></span>
-                            <span class="link-text">About Me</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#resume" class="nav-anim">
-                            <span class="menu-icon lnr lnr-graduation-hat"></span>
-                            <span class="link-text">Resume</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#portfolio" class="nav-anim">
-                            <span class="menu-icon lnr lnr-briefcase"></span>
-                            <span class="link-text">Projects</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#contact" class="nav-anim">
-                            <span class="menu-icon lnr lnr-envelope"></span>
-                            <span class="link-text">Contact</span>
-                        </a>
-                    </li>
-                </ul>
-
-                <div class="social-links">
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/oguzcihan/" target="_blank"><i
-                                    class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="https://github.com/oguzcihan" target="_blank"><i class="fab fa-github"></i></a>
-                        </li>
-                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                    </ul>
-                <div class="header-buttons">
-                    <a href="docs/Oğuzhan Cihan- Resume.pdf" target="_blank" class="btn btn-primary">Download CV</a>
-                </div>
-
-                <div class="copyrights">&copy;Copyright All rights reserved &minus; by<a class="credit"
-                        href="https://oguzcihan.github.io/"> OğuzCihan </a></div>
-
-            </header>
-
-            <!-- Mobile Navigation -->
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <!-- End Mobile Navigation -->
-
-            <!-- Arrows Nav -->
-            <div class="lmpixels-arrows-nav">
-                <div class="lmpixels-arrow-right"><i class="lnr lnr-chevron-right"></i></div>
-                <div class="lmpixels-arrow-left"><i class="lnr lnr-chevron-left"></i></div>
-            </div>
-            <!-- End Arrows Nav -->
-
-            <div class="content-area">
-                <div class="animated-sections">
-                    <!-- Home Subpage -->
-                    <section data-id="home" class="animated-section start-page">
-                        <div class="section-content vcentered">
-
-                            <div class="row">
-                                <div class="col-sm-12 col-md-12 col-lg-12">
-                                    <div class="title-block">
-                                        <h2>Oğuzhan Cihan</h2>
-                                        <div class="owl-carousel text-rotation">
-                                            <div class="item">
-                                                <div class="sp-subtitle">Software Developer</div>
-                                            </div>
-
-                                            <div class="item">
-                                                <div class="sp-subtitle">Back-End Developer</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </section>
-                    <!-- End of Home Subpage -->
-
-                    <!-- About Me Subpage -->
-                    <section data-id="about-me" class="animated-section">
-                        <div class="page-title">
-                            <h2>About <span>Me</span></h2>
-                        </div>
-
-                        <div class="section-content">
-                            <!-- Personal Information -->
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-7">
-                                    <p>I am Oğuzhan Cihan. I graduated from Duzce University Computer Engineering
-                                        Department. I am an open-minded person who develops himself in technology
-                                        and always continues to improve. I have industry experience with Java, Spring
-                                        Boot, C#, .Net Core and Go languages. I also have Angular experience as
-                                        frontend technology. I care about coding clearly and neatly with SOLID
-                                        principles. At the same time, I am a solution-oriented, productive and good
-                                        teammate.</p>
-                                </div>
-
-                                <div class="col-xs-12 col-sm-5">
-                                    <div class="info-list">
-                                        <ul>
-                                            <li>
-                                                <span class="title">Age</span>
-                                                <span class="value">24</span>
-                                            </li>
-
-                                            <li>
-                                                <span class="title">Residence</span>
-                                                <span class="value">Turkey/Ankara</span>
-                                            </li>
-
-
-
-                                            <li>
-                                                <span class="title">e-mail</span>
-                                                <span class="value">oguzcihan@gmail.com</span>
-                                            </li>
-
-                                            <li>
-                                                <span class="title">Phone</span>
-                                                <span class="value">05394351425</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End of Personal Information -->
-
-                            <div class="white-space-50"></div>
-
-
-
-                        </div>
-                    </section>
-                    <!-- End of About Me Subpage -->
-
-                    <!-- Resume Subpage -->
-                    <section data-id="resume" class="animated-section">
-                        <div class="page-title">
-                            <h2>Resume</h2>
-                        </div>
-
-                        <div class="section-content">
-
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-7">
-
-                                    <div class="block-title">
-                                        <h3>Education</h3>
-                                    </div>
-
-                                    <div class="timeline timeline-second-style clearfix">
-                                        <div class="timeline-item clearfix">
-                                            <div class="left-part">
-                                                <h5 class="item-period">2017-2021</h5>
-                                                <span class="item-company">Duzce University</span>
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="right-part">
-                                                <h4 class="item-title">Computer Engineering</h4>
-                                                <p>New graduated. GPA: 3.17 / 4 </p>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-
-                                    <div class="white-space-50"></div>
-
-                                    <div class="block-title">
-                                        <h3>Experience</h3>
-                                    </div>
-
-                                    <div class="timeline timeline-second-style clearfix">
-                                        <div class="timeline-item clearfix">
-                                            <div class="left-part">
-                                                <h5 class="item-period">March 2022 - August 2023 </h5>
-                                                <span class="item-company">Ekinoks Software</span>
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="right-part">
-                                                <h4 class="item-title">Software Engineer</h4>
-                                                <p>For details please download the CV</p>
-          
-                                            </div>
-                                        </div>
-                                        <div class="timeline-item clearfix">
-                                            <div class="left-part">
-                                                <h5 class="item-period">August 2021 - February 2022 </h5>
-                                                <span class="item-company">Sarsılmaz Silah Sanayi</span>
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="right-part">
-                                                <h4 class="item-title">Software Engineer</h4>
-                                                <p>
-                                                    • Help Desk development with Asp.Net Core,
-                                                    • Corporate website development with Asp.Net Core (SARGE),
-                                                    • Outlook integrated mail program development with C# winform,
-                                                    • Eba workflow development, ensuring that the structure of existing
-                                                    forms
-                                                    is not disturbed,
-                                                    • Developing work flow forms with Eba workflow development C#
-                                                    language,
-                                                    • Developing reporting and other codes with SQL for the Eba workflow
-                                                    program,
-                                                    • Ensuring the operation of the QDMS program,
-                                                    • Developing for the transfer of company catalogs to the digital
-                                                    platform
-                                                    (SarUsa)
-                                                    • Providing technical support in case of errors in the SAP system.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="timeline-item clearfix">
-                                            <div class="left-part">
-                                                <h5 class="item-period">July 2021 - August 2021 </h5>
-                                                <span class="item-company">Netsystem Software</span>
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="right-part">
-                                                <h4 class="item-title">Junior Computer Engineer</h4>
-                                                <p>Company corporate website was made and published.</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="timeline-item clearfix">
-                                            <div class="left-part">
-                                                <h5 class="item-period">June 2019 - July 2019</h5>
-                                                <span class="item-company">BilkonSis</span>
-                                            </div>
-                                            <div class="divider"></div>
-                                            <div class="right-part">
-                                                <h4 class="item-title">Intern</h4>
-                                                <p>It is an internship at BilkonSis Elektrik Otomasyon company. In this
-                                                    internship, Stock Tracking system has been developed. (StockR)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <!-- Skills & Certificates -->
-                                <div class="col-xs-12 col-sm-5">
-
-                                    <!-- Coding Skills -->
-                                    <div class="block-title">
-                                        <h3>Coding <span>Skills</span></h3>
-                                    </div>
-
-                                    <div class="skills-info skills-second-style">
-                                        <!-- Skill 5 -->
-                                        <div class="skill clearfix">
-                                            <h4>Java Spring Boot</h4>
-                                            <div class="skill-value">85%</div>
-                                        </div>
-                                        <div class="skill-container skill-6">
-                                            <div class="skill-percentage"></div>
-                                        </div>
-                                        <!-- End of Skill 5 -->
-
-
-                                        <!-- Skill 7 -->
-                                        <div class="skill clearfix">
-                                            <h4>Asp.Net Core</h4>
-                                            <div class="skill-value">85%</div>
-                                        </div>
-                                        <div class="skill-container skill-6">
-                                            <div class="skill-percentage"></div>
-                                        </div>
-                                        <!-- End of Skill 7 -->
-                                        <!-- Skill 9 -->
-                                        <div class="skill clearfix">
-                                            <h4>C#</h4>
-                                            <div class="skill-value">85%</div>
-                                        </div>
-                                        <div class="skill-container skill-6">
-                                            <div class="skill-percentage"></div>
-                                        </div>
-                                        <!-- Skill 8 -->
-                                        <div class="skill clearfix">
-                                            <h4>Python</h4>
-                                            <div class="skill-value">90%</div>
-                                        </div>
-                                        <div class="skill-container skill-9">
-                                            <div class="skill-percentage"></div>
-                                        </div>
-                                        <!-- End of Skill 8 -->
-
-                                        <!-- Skill 9 -->
-                                        <div class="skill clearfix">
-                                            <h4>Data Analysis</h4>
-                                            <div class="skill-value">50%</div>
-                                        </div>
-                                        <div class="skill-container skill-10">
-                                            <div class="skill-percentage"></div>
-                                        </div>
-                                        <!-- Skill 9 -->
-                                        <div class="skill clearfix">
-                                            <h4>Deep Learning</h4>
-                                            <div class="skill-value">50%</div>
-                                        </div>
-                                        <div class="skill-container skill-10">
-                                            <div class="skill-percentage"></div>
-                                        </div>
-
-
-                                        <!-- Skill 6 -->
-                                        <div class="skill clearfix">
-                                            <h4>Android Programming-Java</h4>
-                                            <div class="skill-value">50%</div>
-                                        </div>
-                                        <div class="skill-container skill-10">
-                                            <div class="skill-percentage"></div>
-                                        </div>
-                                        <!-- End of Skill 6 -->
-
-                                        <!-- Skill 9 -->
-                                        <div class="skill clearfix">
-                                            <h4>Team Works</h4>
-                                            <div class="skill-value">99%</div>
-                                        </div>
-                                        <div class="skill-container skill-7">
-                                            <div class="skill-percentage"></div>
-                                        </div>
-                                        <!-- End of Skill 9 -->
-                                    </div>
-                                    <!-- End of Coding Skills -->
-
-                                    <div class="white-space-10"></div>
-
-                                    <!-- Knowledges -->
-                                    <div class="block-title">
-                                        <h3>Knowledges</h3>
-                                    </div>
-
-                                    <ul class="knowledges">
-                                        <li>Marketing</li>
-                                        <li>Print</li>
-                                        <li>Digital Design</li>
-                                        <li>Social Media</li>
-                                        <li>Time Management</li>
-                                        <li>Communication</li>
-                                        <li>Problem-Solving</li>
-                                        <li>Social Networking</li>
-                                        <li>Flexibility</li>
-                                    </ul>
-                                    <!-- End of Knowledges -->
-                                </div>
-                                <!-- End of Skills & Certificates -->
-                            </div>
-
-                            <div class="white-space-50"></div>
-
-                            <!-- Certificates -->
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12">
-                                    <div class="block-title">
-                                        <h3>Certificates</h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <!-- Certificate 1 -->
-                                <div class="col-xs-12 col-sm-6">
-                                    <div class="certificate-item clearfix">
-                                        <div class="certi-logo">
-                                            <img src="img/clients/client-1.png" alt="logo">
-                                        </div>
-
-                                        <div class="certi-content">
-                                            <div class="certi-title">
-                                                <h4>Java Programming</h4>
-                                            </div>
-                                            <div class="certi-id">
-                                                <span>Membership ID: XXXX</span>
-                                            </div>
-                                            <div class="certi-date">
-                                                <span>19 April 2021</span>
-                                            </div>
-                                            <div class="certi-company">
-                                                <span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End of Certificate 1 -->
-
-                                <!-- Certificate 2 -->
-                                <div class="col-xs-12 col-sm-6">
-                                    <div class="certificate-item clearfix">
-                                        <div class="certi-logo">
-                                            <img src="img/clients/client-1.png" alt="logo">
-                                        </div>
-
-                                        <div class="certi-content">
-                                            <div class="certi-title">
-                                                <h4>Python Programming</h4>
-                                            </div>
-                                            <div class="certi-id">
-                                                <span>Membership ID: XXXX</span>
-                                            </div>
-                                            <div class="certi-date">
-                                                <span>19 April 2021</span>
-                                            </div>
-                                            <div class="certi-company">
-                                                <span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End of Certificate 2 -->
-
-                            </div>
-                            <!-- End of Certificates -->
-                        </div>
-                    </section>
-                    <!-- End of Resume Subpage -->
-
-                    <!-- Portfolio Subpage -->
-                    <section data-id="portfolio" class="animated-section">
-                        <div class="page-title">
-                            <h2>Portfolio</h2>
-                        </div>
-
-                        <div class="section-content">
-
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12">
-                                    <!-- Portfolio Content -->
-                                    <div class="portfolio-content">
-
-                                        <ul class="portfolio-filters">
-                                            <li class="active">
-                                                <a class="filter btn btn-sm btn-link" data-group="category_all">All</a>
-                                            </li>
-
-                                        </ul>
-
-                                        <!-- Portfolio Grid -->
-                                        <div class="portfolio-grid three-columns">
-
-
-
-                                            <figure class="item standard"
-                                                data-groups='["category_all", "category_detailed"]'>
-                                                <div class="portfolio-item-img">
-                                                    <img src="img/portfolio/project-2.jpg" alt="Media Project 2"
-                                                        title="" />
-                                                    <a href="portfolio-1.html" class="ajax-page-load"></a>
-                                                </div>
-
-                                                <i class="far fa-file-alt"></i>
-                                                <h4 class="name">Sentiment Analysis</h4>
-                                                <span class="category">Detailed</span>
-                                            </figure>
-
-
-                                            <figure class="item standard"
-                                                data-groups='["category_all", "category_detailed"]'>
-                                                <div class="portfolio-item-img">
-                                                    <img src="img/portfolio/project-4.jpg" alt="Media Project 1"
-                                                        title="" />
-                                                    <a href="https://github.com/oguzcihan" target="_blank"></a>
-                                                </div>
-
-                                                <i class="far fa-file-alt"></i>
-                                                <h4 class="name">All Projects</h4>
-                                                <span class="category">Detailed</span>
-                                            </figure>
-
-
-
-
-                                        </div>
-                                    </div>
-                                    <!-- End of Portfolio Content -->
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- End of Portfolio Subpage -->
-
-
-
-                    <!-- Contact Subpage -->
-                    <section data-id="contact" class="animated-section">
-                        <div class="page-title">
-                            <h2>Contact</h2>
-                        </div>
-
-                        <div class="section-content">
-
-                            <div class="row">
-                                <!-- Contact Info -->
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="lm-info-block gray-default">
-                                        <i class="lnr lnr-map-marker"></i>
-                                        <h4>Turkey</h4>
-                                        <span class="lm-info-block-value"></span>
-                                        <span class="lm-info-block-text"></span>
-                                    </div>
-
-                                    <div class="lm-info-block gray-default">
-                                        <i class="lnr lnr-phone-handset"></i>
-                                        <h4>-</h4>
-                                        <span class="lm-info-block-value"></span>
-                                        <span class="lm-info-block-text"></span>
-                                    </div>
-
-                                    <div class="lm-info-block gray-default">
-                                        <i class="lnr lnr-envelope"></i>
-                                        <h4>oguzcihan12@gmail.com</h4>
-                                        <span class="lm-info-block-value"></span>
-                                        <span class="lm-info-block-text"></span>
-                                    </div>
-
-                                    <div class="lm-info-block gray-default">
-                                        <i class="lnr lnr-checkmark-circle"></i>
-                                        <h4>Freelance Available</h4>
-                                        <span class="lm-info-block-value"></span>
-                                        <span class="lm-info-block-text"></span>
-                                    </div>
-
-
-                                </div>
-                                <!-- End of Contact Info -->
-
-                                <!-- Contact Form -->
-                                <div class="col-xs-12 col-sm-8">
-                                    <div id="map" class="map">
-                                        <div class="lmpixels-map">
-                                            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97033.06191663993!2d34.87186337100761!3d40.53533232301682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40872a9f1a35ab71%3A0xa34943cf02a0f8d5!2zw4dvcnVtLCDDh29ydW0gTWVya2V6L8OHb3J1bQ!5e0!3m2!1sen!2str!4v1623268614947!5m2!1sen!2str"></iframe>
-
-
-                                        </div>
-                                    </div>
-                                    <div class="block-title">
-                                        <h3>How Can I <span>Help You?</span></h3>
-                                    </div>
-
-                                    <form id="contact_form" class="contact-form"
-                                        action="https://lmpixels.com/demo/breezycv/darkfw/1/contact_form/contact_form.php"
-                                        method="post">
-
-                                        <div class="messages"></div>
-
-                                        <div class="controls two-columns">
-                                            <div class="fields clearfix">
-                                                <div class="left-column">
-                                                    <div class="form-group form-group-with-icon">
-                                                        <input id="form_name" type="text" name="name"
-                                                            class="form-control" placeholder="" required="required"
-                                                            data-error="Name is required.">
-                                                        <label>Full Name</label>
-                                                        <div class="form-control-border"></div>
-                                                        <div class="help-block with-errors"></div>
-                                                    </div>
-
-                                                    <div class="form-group form-group-with-icon">
-                                                        <input id="form_email" type="email" name="email"
-                                                            class="form-control" placeholder="" required="required"
-                                                            data-error="Valid email is required.">
-                                                        <label>Email Address</label>
-                                                        <div class="form-control-border"></div>
-                                                        <div class="help-block with-errors"></div>
-                                                    </div>
-
-                                                    <div class="form-group form-group-with-icon">
-                                                        <input id="form_subject" type="text" name="subject"
-                                                            class="form-control" placeholder="" required="required"
-                                                            data-error="Subject is required.">
-                                                        <label>Subject</label>
-                                                        <div class="form-control-border"></div>
-                                                        <div class="help-block with-errors"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="right-column">
-                                                    <div class="form-group form-group-with-icon">
-                                                        <textarea id="form_message" name="message" class="form-control"
-                                                            placeholder="" rows="7" required="required"
-                                                            data-error="Please, leave me a message."></textarea>
-                                                        <label>Message</label>
-                                                        <div class="form-control-border"></div>
-                                                        <div class="help-block with-errors"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="g-recaptcha"
-                                                data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI"
-                                                data-theme="dark"></div>
-
-                                            <input type="submit" class="button btn-send" value="Send message">
-                                        </div>
-                                    </form>
-                                </div>
-                                <!-- End of Contact Form -->
-                            </div>
-
-                        </div>
-                    </section>
-                    <!-- End of Contact Subpage -->
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <script data-cfasync="false"
-        src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/modernizr.custom.js"></script>
-    <script src="js/animating.js"></script>
-
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src='../../../../../www.google.com/recaptcha/api.js'></script>
-
-    <script src='js/perfect-scrollbar.min.js'></script>
-    <script src='js/jquery.shuffle.min.js'></script>
-    <script src='js/masonry.pkgd.min.js'></script>
-    <script src='js/owl.carousel.min.js'></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-
-    <script src="js/validator.js"></script>
-    <script src="js/main.js"></script>
-
-    <script type="text/javascript">
-            (function () {
-                window['__CF$cv$params'] = {
-                    r: '65ccb5be2fefda32',
-                    m: 'bec2a64bdf5b66ddfdfe65459414652a26a0d51f-1623266350-1800-AbQrtxiAteSjneXkJdF2WFriNfcZ6BuQkH2FGfku9+hcIY2hAxXh9RHgIHiWSs+pd0AH6D2DDAHbH0gW50H0/LMKIe13WjZFoJNDY3Q0gW6uwrpjR/PW+6HfCAYUEO6+USCrx4P9HlirwHBCLZ6RMjNDTsRH4559HNYmzhKTub9O',
-                    s: [0xffaf7c16eb, 0x0c3d13423f],
-                }
-            })();
-    </script>
-    <script defer src="../../../../../static.cloudflareinsights.com/beacon.min.js"
-        data-cf-beacon='{"rayId":"65ccb5be2fefda32","version":"2021.5.2","r":1,"token":"94b99c0576dc45bf9d669fb5e9256829","si":10}'></script>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 px-6 md:px-16">
+    <h2 class="text-4xl font-bold text-center mb-10">Contact</h2>
+    <p class="text-center text-lg leading-relaxed">
+      Email: <span class="font-semibold">oguzhancihan.dev@gmail.com</span><br>
+      LinkedIn: <span class="font-semibold">linkedin.com/in/oguzhancihan</span>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center bg-gray-900 text-gray-300 dark:bg-black dark:text-gray-400">
+    © 2025 Oğuzhan Cihan — All rights reserved
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const icon = document.getElementById('themeIcon');
+      html.classList.toggle('dark');
+      icon.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
+    }
+  </script>
 </body>
-
 </html>
