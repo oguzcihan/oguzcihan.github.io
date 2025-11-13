@@ -16,61 +16,87 @@
     }
   </script>
 </head>
-<body class="font-inter bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
-  <!-- Theme Toggle Button -->
-  <button onclick="toggleTheme()" id="themeToggle" class="fixed top-5 right-5 z-50 p-3 rounded-full bg-white dark:bg-gray-700 shadow-lg">
+<body class="font-inter bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition duration-300">
+
+  <!-- Theme Toggle -->
+  <button onclick="toggleTheme()" class="fixed top-5 right-5 z-50 bg-white dark:bg-gray-700 shadow-xl p-3 rounded-full">
     <span id="themeIcon" class="text-xl">🌙</span>
   </button>
 
-  <!-- Hero Section -->
-  <header class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-br from-indigo-600 to-cyan-500 dark:from-indigo-800 dark:to-cyan-600 text-white">
-    <h1 class="text-5xl font-bold mb-4">Oğuzhan Cihan</h1>
-    <p class="text-lg opacity-90 max-w-xl">Software Engineer • AI & Computer Vision Researcher • Fullstack Developer</p>
-  </header>
+  <!-- HERO - Modern Creative -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-gray-900 via-indigo-700 to-purple-600 dark:from-black dark:via-indigo-900 dark:to-purple-800 text-white relative overflow-hidden">
 
-  <!-- About -->
-  <section id="about" class="py-24 px-6 md:px-16">
-    <h2 class="text-4xl font-bold text-center mb-10">About Me</h2>
-    <p class="max-w-3xl mx-auto text-center text-lg leading-relaxed">
-      I am a software engineer experienced in Java, Spring Boot, .NET, Go, and modern frontend technologies.
-      I build scalable microservices, AI‑driven systems, and intuitive full‑stack applications. I focus on clean
-      architectural patterns, ML/computer vision, and innovative digital solutions.
+    <!-- Background floating shapes -->
+    <div class="absolute top-10 left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-10 right-10 w-52 h-52 bg-cyan-400/20 rounded-full blur-3xl animate-ping"></div>
+
+    <h1 class="text-6xl md:text-7xl font-extrabold mb-6 tracking-tight">Oğuzhan Cihan</h1>
+    <p class="text-xl md:text-2xl opacity-90 max-w-2xl leading-relaxed">
+      Software Engineer • AI & Computer Vision • Full‑Stack Developer
     </p>
+
+    <a href="#projects" class="mt-10 px-8 py-4 bg-white text-black font-semibold rounded-full shadow-lg hover:scale-105 transition inline-block">
+      View My Work
+    </a>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="py-24 px-6 md:px-16 bg-gray-100 dark:bg-gray-800">
-    <h2 class="text-4xl font-bold text-center mb-12">Projects</h2>
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-28 px-8 md:px-20">
+    <h2 class="text-4xl font-bold text-center mb-16">Who Am I?</h2>
 
-    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-      <div class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
-        <h3 class="text-2xl font-semibold mb-3">AI Password Analyzer</h3>
-        <p class="opacity-80">Flask + Tailwind AI‑powered password strength analyzer & smart generator.</p>
-      </div>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <img src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?q=80&w=600" class="rounded-3xl shadow-xl" />
 
-      <div class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
-        <h3 class="text-2xl font-semibold mb-3">sahibinesor.com</h3>
-        <p class="opacity-80">A vehicle analytics & real driver review platform built with React + TypeScript.</p>
-      </div>
-
-      <div class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
-        <h3 class="text-2xl font-semibold mb-3">Vehicle Recognition</h3>
-        <p class="opacity-80">YOLOv8 / YOLOv12 license plate + model detection pipeline with OCR.</p>
-      </div>
+      <p class="text-lg leading-relaxed opacity-90">
+        I'm a passionate software engineer building scalable backend systems, clean frontend interfaces, and
+        AI‑powered solutions. With strong experience in Java, Spring Boot, .NET, Go, React, and machine learning,
+        I enjoy designing impactful digital products and modern engineering architectures.
+      </p>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-24 px-6 md:px-16">
-    <h2 class="text-4xl font-bold text-center mb-10">Contact</h2>
-    <p class="text-center text-lg leading-relaxed">
-      Email: <span class="font-semibold">oguzcihan12@gmail.com</span><br>
-      LinkedIn: <span class="font-semibold">linkedin.com/in/oguzcihan</span>
-    </p>
+  <!-- PROJECTS - Creative Grid Cards -->
+  <section id="projects" class="py-28 px-8 md:px-20 bg-gray-100 dark:bg-gray-800">
+    <h2 class="text-4xl font-bold text-center mb-16">Projects</h2>
+
+    <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Project Card -->
+      <div class="group bg-white dark:bg-gray-700 rounded-3xl p-8 shadow-xl hover:-translate-y-3 transition duration-300 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-indigo-400/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 transition"></div>
+        <h3 class="text-2xl font-semibold mb-3">AI Password Analyzer</h3>
+        <p class="opacity-80 mb-4">Flask + Tailwind powered intelligent password strength analysis & generation.</p>
+      </div>
+
+      <!-- Project Card -->
+      <div class="group bg-white dark:bg-gray-700 rounded-3xl p-8 shadow-xl hover:-translate-y-3 transition duration-300 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20 opacity-0 group-hover:opacity-100 transition"></div>
+        <h3 class="text-2xl font-semibold mb-3">sahibinesor.com</h3>
+        <p class="opacity-80 mb-4">A next‑gen vehicle analytics & real driver feedback platform.</p>
+      </div>
+
+      <!-- Project Card -->
+      <div class="group bg-white dark:bg-gray-700 rounded-3xl p-8 shadow-xl hover:-translate-y-3 transition duration-300 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-orange-400/20 to-yellow-400/20 opacity-0 group-hover:opacity-100 transition"></div>
+        <h3 class="text-2xl font-semibold mb-3">Vehicle Recognition System</h3>
+        <p class="opacity-80 mb-4">YOLOv8/YOLOv12‑based license plate & vehicle detection with OCR pipeline.</p>
+      </div>
+
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-8 text-center bg-gray-900 text-gray-300 dark:bg-black dark:text-gray-400">
+  <!-- CONTACT -->
+  <section id="contact" class="py-28 px-8 md:px-20">
+    <h2 class="text-4xl font-bold text-center mb-16">Get In Touch</h2>
+
+    <div class="text-center text-lg leading-relaxed">
+      <p>Email: <span class="font-semibold">oguzcihan12@gmail.com</span></p>
+      <p>LinkedIn: <span class="font-semibold">linkedin.com/in/oguzcihan</span></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 text-center bg-gray-900 text-gray-400 dark:bg-black">
     © 2025 Oğuzhan Cihan — All rights reserved
   </footer>
 
@@ -82,5 +108,6 @@
       icon.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
     }
   </script>
+
 </body>
 </html>
